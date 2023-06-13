@@ -1,38 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Frontend Mentor | Product preview card component</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body> 
-  <!-- Carde branco -->
-  <main class="card">
-  <!-- Imagem -->
-    <div class="image_card">
-      <img src="images/image-product-desktop.jpg"image-product-desktop">
-    </div>
-      <!-- Texto do card -->
-      <div class="details_card">
-        <p class="category">P E R F U M E</p>
-        <h1 class="product_title">Gabrielle <br> Essence Eau <br> De Parfum
-        </h1>
-        <p class="product_description">
-        A floral, solar and voluptuous <br> interpretation composed by <br> Olivier Polge, 
-        Perfumer-Creator for the House of CHANEL.
-      </p>
-      <!-- Preços -->
-      <div class="card_price">
-        <h1 class="new_price">$149.99</h1>
-        <p class="old_price">$169.99</p>
-      </div>
-      <!-- Botão do card -->
-        <button class="btn">
-          <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>
-          Add to Cart
-        </button>
-      </div>
-    </main>
-  </body>
-</html>
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap');
+
+body {
+font-size: 14px;
+background-color:hsl(30, 38%, 92%);
+/* Indica que o elemento irá ocumpar 100% da altura da janela*/
+min-height: 100vh;
+display: flex;
+/* Centraliza no meio do topo */
+justify-content: center;
+/* centraliza no meio do centro */
+align-items: center;
+
+}
+
+* {
+    
+/* permite incluir o preenchimento e a borda na largura e altura total de um elemento . */
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+
+.card {
+    
+display: flex;
+background-color: white;
+border-radius: 10px;
+width:666px;
+/* indica que teremos uma margem 0 para o topo e a base e uma margem de 1rem: 16px para direita e a esquerda */
+margin: 0 1rem;
+    
+}
+
+.image_card {
+/* indica que o tamanho da div com essa classe está com 50% do tamanho da largura */
+width: 50%;
+    
+}
+
+.image_card img {
+/*indica que o tamanho da largura está 100% em relação ao tamanho do elemento pai (.card)  */
+width: 100%;
+/* indica que o tamanho da altura está 100% em relação ao tamanho do elemento pai (.card) */
+height: 100%;
+/* indica que o elemento dever ser dimensionado para preencher completamente o contêiner, 
+mantendo a proporção original do elemento */
+object-fit: cover;
+/* Indica colocar o border-radius somente no canto superior do canto esquerdo */
+border-top-left-radius: 10px;
+/* indica colcoar o border-radius somente no canto inferior do canto esquerdo */
+border-bottom-left-radius: 10px;
+    
+}
+.details_card {
+/* Indica que o tamanho da largura está 50% em relação ao tamanho do elemento pai (.card)  */
+width: 50%;
+/* indica que o tamanho do preenchimento terá um espaçamento interno 2x o tamanho da fonte atual */
+padding: 1rem;
+text-align: left;
+
+    
+}
+
+.category {
+
+font-family: 'Montserrat', sans-se;
+padding: 1rem;
+color: hsl(228, 12%, 48%);
+
+}
+
+.product_title {
+color: hsl(212, 21%, 14%);
+font-family: 'Fraunces', serif; ;
+padding: 1rem;
+
+}
+.product_description {
+font-family:'Montserrat', sans-se; ;
+padding: 1rem;
+/* define a altura de uma linha de texto, afetando assim o espaçamento vertical entre as linhas */
+line-height: 1.7;
+color: hsl(228, 12%, 48%);
+
+}
+
+.card_price {
+
+display: flex;
+gap: 1rem;
+align-items: center;
+padding: 1rem;
+
+
+}
+
+.new_price {
+font-family: 'Fraunces', serif;
+color: hsl(158, 36%, 37%);
+padding: 1rem;
+
+}
+
+.old_price {
+font-family:'Montserrat', sans-se; 
+color: hsl(228, 12%, 48%);
+/* Risca o texto  */
+text-decoration: line-through;
+
+}
+ /* Representa um seletor descendente, que seleciona um elemento que está aninhado dentro de outro elemento */
+.details_card .btn {
+width: 100%;
+border: 0;
+/* Adiciona uma linha de contorno ao redor de um elemento, como uma borda. */
+outline: 0;
+background-color: hsl(158, 36%, 37%);
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+/* Conttrola o espaçamento entre os itens de um layout em grade(grid) ou flexivel(flex) */
+gap: 1rem;
+font-family:'Montserrat', sans-se; 
+padding: 1rem 2rem;
+border-radius: 10px;
+/* É usada para indicar que o elemento é clicavel ou interativo */
+cursor: pointer;
+    
+
+}
+/* A regra media query defini estilos específicos para dispositivos com largura de tela igual ou inferior a 550 pixels */
+@media only screen and (max-width:550px) {
+.card {
+margin-top: 1rem;
+ margin-bottom: 1rem;
+     
+}
+   
+.image_card {
+width: 100%;
+height:40%;
+
+}
+/* Foi colocado uma outra imagem, porém para aparecer em dispositivos mobile */
+.image_card img {
+content: url("images/image-product-mobile.jpg")
+}
+/* Utilizando o flexbox para que elemento ficasse em baixo da imagem */
+.card{
+flex-direction: column;
+}
+.details_card {
+width: 100%;
+}
+
+.details_card .product_title {
+padding-right:0 ;
+
+}
+
+.image_card img {
+
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 0px;
+}
+
+}
