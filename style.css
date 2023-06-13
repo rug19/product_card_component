@@ -131,7 +131,6 @@ padding: 1rem 2rem;
 border-radius: 10px;
 /* É usada para indicar que o elemento é clicavel ou interativo */
 cursor: pointer;
-    
 
 }
 /* A regra media query defini estilos específicos para dispositivos com largura de tela igual ou inferior a 550 pixels */
@@ -152,7 +151,7 @@ height:40%;
 content: url("images/image-product-mobile.jpg")
 }
 /* Utilizando o flexbox para que elemento ficasse em baixo da imagem */
-.card{
+.card {
 flex-direction: column;
 }
 .details_card {
@@ -169,6 +168,4 @@ padding-right:0 ;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
 border-bottom-left-radius: 0px;
-}
-
 }
